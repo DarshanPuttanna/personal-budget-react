@@ -2,19 +2,9 @@ import React,  { useEffect, useState }  from 'react';
 import * as d3 from "d3";
 import axios from 'axios';
 
-function PieChart(props) {
+function D3Chart(props) {
     const [data, setData] = useState([]);
     const { outerRadius = 200, innerRadius = 0 } = props;
-  
-    // const margin = {
-    //   top: 10,
-    //   right: 10,
-    //   bottom: 10,
-    //   left: 10,
-    // };
-  
-    // const width = 2 * outerRadius + margin.left + margin.right;
-    // const height = 2 * outerRadius + margin.top + margin.bottom;
     const width = 2*outerRadius;
     const height = 2*outerRadius;
 
@@ -82,4 +72,4 @@ function PieChart(props) {
     return <div id="pie-container" />;
   }
   
-  export default PieChart;
+  export default D3Chart;
